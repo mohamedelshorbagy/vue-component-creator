@@ -1,14 +1,14 @@
 {
-  "name": "vue-component",
+  "name": "vue-create-comp",
   "version": "1.0.0",
-  "description": "",
+  "description": "Vue Component Creator v1.0",
   "main": "app.js",
   "preferGlobal": true,
   "bin": "./command.js",
   "scripts": {
     "start": "node app.js"
   },
-  "author": "Shorbagy",
+  "author": "shorbagy",
   "license": "ISC",
   "dependencies": {
     "commander": "^2.14.1",
