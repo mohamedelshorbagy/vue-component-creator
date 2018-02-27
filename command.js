@@ -11,11 +11,10 @@ program
 
 
 program
-    .command("component <cmpname>")
+    .command("create <cmpname>")
     .alias("c")
     .description("Add Vue Component")
     .action((cmpname) => {
-        console.log(cmpname);
         createVueComponent(cmpname);
     });
 

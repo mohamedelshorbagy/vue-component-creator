@@ -1,11 +1,16 @@
 const touch = require("touch");
 const fs = require("fs");
 const path = require("path");
+const os = require("os");
 
 
 
 
 const createVueComponent = (argvName) => {
+
+    let OsType = os.platform();
+        
+
     let argvParam = argvName;
     let fileName = argvParam + ".vue";
     let documnetData = `<template>
@@ -22,8 +27,14 @@ const createVueComponent = (argvName) => {
 <style scoped>
 </style>
     `;
-        
-    let fullDir = process.cwd() + "/" + argvParam + "/" + fileName; 
+    
+    let fullDir;
+    if(OsType.indexOf("win") != -1) { // Windows Case
+        fullDir = process.cwd() + "\\" + argvParam + "\\" + fileName; 
+    } else { // Any OS Case
+        fullDir = process.cwd() + "/" + argvParam + "/" + fileName; 
+    }
+    
     
     
     if(!fs.existsSync(argvParam)) {
