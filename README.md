@@ -12,7 +12,8 @@
     git clone https://github.com/mohamedelshorbagy/vue-component-creator
 ```
 
-<p>After Cloning Project, Open Project Directory and run these commands</p>   
+<p>After Cloning Project, Open Project Directory and run these commands</p>
+
 ```
     npm install
     npm link
@@ -20,6 +21,7 @@
 
 ## Note
 <p>For Linux/Ubuntu Users</p>
+
 ```
     sudo npm install
     sudo npm link
@@ -27,12 +29,13 @@
 
 ## Usage
 <p>In any Vue Project run this command</p>
-<br>
+
 ```
     vue-component component <ComponentName>
 ```
 
 <p>Alias</p>
+
 ```
     vue-component c <ComponentName>
 ```
