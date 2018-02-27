@@ -1,6 +1,6 @@
 {
   "name": "vue-create-comp",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Vue Component Creator v1.0",
   "main": "app.js",
   "preferGlobal": true,
