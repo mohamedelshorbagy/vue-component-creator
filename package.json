@@ -8,6 +8,10 @@
   "scripts": {
     "start": "node app.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mohamedelshorbagy/vue-component-creator"
+  },
   "author": "shorbagy",
   "license": "ISC",
   "dependencies": {
