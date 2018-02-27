@@ -9,20 +9,20 @@
 ### Install Package 
 
 ```
-    npm install -g vue-create-comp
+npm install -g vue-create-comp
 ```
 
 ## Usage
 <p>In any Vue Project run this command</p>
 
 ```
-    vue-create-comp create <ComponentName>
+vue-create-comp create <ComponentName>
 ```
 
 <p>Alias</p>
 
 ```
-    vue-create-comp c <ComponentName>
+vue-create-comp c <ComponentName>
 ```
 
 
@@ -32,22 +32,22 @@
 ### Cloning Project  
 
 ```
-    git clone https://github.com/mohamedelshorbagy/vue-component-creator
+git clone https://github.com/mohamedelshorbagy/vue-component-creator
 ```
 
 <p>After Cloning Project, Open Project Directory and run these commands</p>
 
 ```
-    npm install
-    npm link
+npm install
+npm link
 ```
 
 ## Note
 <p>For Linux/Ubuntu/Mac Users</p>
 
 ```
-    sudo npm install
-    sudo npm link
+sudo npm install
+sudo npm link
 ```
 
 
