@@ -1,21 +1,16 @@
-const touch = require("touch");
 const fs = require("fs");
-const path = require("path");
 const os = require("os");
 
 
 
 
-const createVueComponent = (argvName) => {
+const createVueComponent = (argvName, dir) => {
 
     let OsType = os.platform();
-
-
-    let argvParam = argvName;
-    let fileName = argvParam + ".vue";
+    let fileName = argvName + ".vue";
     let documnetData = `<template>
     <div id="app">
-        <p>Component ${argvParam} is Working!</p>
+        <p>Component ${argvName} is Working!</p>
     </div>
 </template>
     
@@ -29,29 +24,39 @@ const createVueComponent = (argvName) => {
     `;
 
     let fullDir;
-    if (OsType.indexOf("win") != -1) { // Windows Case
-        fullDir = process.cwd() + "\\" + argvParam + "\\" + fileName;
-    } else { // Any OS Case
-        fullDir = process.cwd() + "/" + argvParam + "/" + fileName;
+    let componentFolder;
+    if (OsType.indexOf("win") != -1) { // Windows OS Case
+        if (dir) {
+            fullDir = process.cwd() + "\\src\\components\\" + fileName;
+            componentFolder = process.cwd() + "\\src\\components";
+        } else {
+            fullDir = process.cwd() + "\\src\\" + fileName;
+        }
+    } else { // Other OS Types
+        if (dir) {
+            fullDir = process.cwd() + "/src/components/" + fileName;
+            componentFolder = process.cwd() + "/src/components";
+        } else {
+            fullDir = process.cwd() + "/src/" + fileName;
+        }
     }
 
+    if (dir) {
+        if (!fs.existsSync(componentFolder)) {
+            fs.mkdirSync(componentFolder);
+        }
+    }
 
-
-    if (!fs.existsSync(argvParam)) {
-        fs.mkdirSync(argvParam);
-        touch(fullDir, function (resp) {
-            fs.writeFile(fullDir, documnetData, function (err) {
-                if (err) {
-                    return console.log(err);
-                }
-                console.log(argvParam + " Component Was Created!");
-            });
-        })
+    if (!fs.existsSync(fullDir)) {
+        fs.writeFile(fullDir, documnetData, function (err) {
+            if (err) {
+                return console.log(err);
+            }
+            console.log(argvName + " Component Was Created!");
+        });
     } else {
         console.log("Component is already Created");
     }
-
-
 }
 
 

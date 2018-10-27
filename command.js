@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const program = require("commander");
-const createVueComponent  = require("./app.js");
+const createVueComponent = require("./app.js");
 
 
 
@@ -11,11 +11,12 @@ program
 
 
 program
-    .command("create <cmpname>")
-    .alias("c")
+    .command("generate <cmpname>")
+    .alias("g")
+    .option('-d, --dir', 'Create Components')
     .description("Add Vue Component")
-    .action((cmpname) => {
-        createVueComponent(cmpname);
+    .action((cmpname, options) => {
+        createVueComponent(cmpname, options.dir);
     });
 
 program.parse(process.argv);
