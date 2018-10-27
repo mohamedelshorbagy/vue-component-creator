@@ -16,13 +16,13 @@ npm install -g vue-create-comp
 <p>In any Vue Project run this command</p>
 
 ```
-vue-create-comp create <ComponentName>
+vue-create-comp generate <ComponentName>
 ```
 
 <p>Alias</p>
 
 ```
-vue-create-comp c <ComponentName>
+vue-create-comp g <ComponentName>
 ```
 
 
